@@ -17,4 +17,4 @@ spec:
   - type: Resource
     resource:
       name: memory
-      targetAverageValue: 10Mi
+      targetAverageValue: 80Mi
