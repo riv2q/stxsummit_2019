@@ -16,6 +16,7 @@ spec:
         app: guestbook
         tier: frontend
     spec:
+      terminationGracePeriodSeconds: 30
       containers:
       - name: php-redis
         image: gcr.io/google-samples/gb-frontend:v4
