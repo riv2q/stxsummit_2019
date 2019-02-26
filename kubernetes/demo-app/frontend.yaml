@@ -16,7 +16,7 @@ spec:
         app: guestbook
         tier: frontend
     spec:
-      terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 40
       containers:
       - name: php-redis
         image: gcr.io/google-samples/gb-frontend:v4
@@ -37,6 +37,13 @@ spec:
           # value: env
         ports:
         - containerPort: 80
+        lifecycle:
+          preStop:
+            exec:
+              command: [
+                # Gracefully shutdown nginx
+                "/usr/sbin/apachectl", "graceful-stop",
+              ]
 ---
 apiVersion: v1
 kind: Service
