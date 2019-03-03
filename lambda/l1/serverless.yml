@@ -13,6 +13,18 @@
 
 service: l1 # NOTE: update this with your service name
 
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dokerizePip: true
+
+package:
+  exclude:
+    - node_modules/**
+    - venv/**
+
 # You can pin your service to only deploy with a specific Serverless version
 # Check out our docs for more details
 # frameworkVersion: "=X.X.X"

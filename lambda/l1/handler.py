@@ -1,9 +1,13 @@
 import json
 
+import requests
+
 
 def hello(event, context):
+    stx_status = requests.get('https://stxnext.com').status_code
     body = {
-        "message": "Hello Summit",
+        "message": "STX Web Page status: {status}".format(status=stx_status),
+        "event": event
     }
 
     response = {
