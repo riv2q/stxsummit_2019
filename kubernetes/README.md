@@ -1,18 +1,10 @@
 # AWS Kubernetes demo part
 
-
 ## create EKS infrastructure
 ```
 eksctl create cluster --name=eks-summit --nodes-min=2 --nodes-max=10 --node-type=t2.medium --asg-access --ssh-access
 ```
 
-
-
-
-## install metrics-server
-```
-kubectl apply -f metrics-server/
-```
 
 ## install kubernetes-dashboard
 ```
@@ -37,7 +29,21 @@ kubectl apply -f demo-app/
 when app will be installed in kubernetes You will be able to see endpoint in kubernetes-dashboard to access app
 
 
+## install metrics-server
+```
+kubectl apply -f metrics-server/
+```
+
+
 ## install autoscaler
 ```
 kubectl apply -f autoscaler/
 ```
+
+
+links:
+https://eksctl.io
+https://github.com/kubernetes/kubectl
+https://github.com/kubernetes/dashboard
+https://github.com/kubernetes-incubator/metrics-server
+https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
