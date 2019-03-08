@@ -1,0 +1,27 @@
+
+service: summit
+
+provider:
+  name: aws
+  runtime: python3.7
+
+functions:
+  hello:
+    handler: handler.hello
+    events:
+      - http:
+          path: summit
+          method: get
+
+
+plugins:
+  - serverless-python-requirements
+
+custom:
+  pythonRequirements:
+    dokerizePip: true
+
+
+package:
+  exclude:
+    - node_modules/**
