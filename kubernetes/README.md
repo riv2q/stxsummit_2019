@@ -42,12 +42,8 @@ kubectl apply -f autoscaler/
 
 
 links:
-https://eksctl.io
-
-https://github.com/kubernetes/kubectl
-
-https://github.com/kubernetes/dashboard
-
-https://github.com/kubernetes-incubator/metrics-server
-
-https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
+eksctl: https://eksctl.io
+kubectl: https://github.com/kubernetes/kubectl
+kubernetes-dashboard: https://github.com/kubernetes/dashboard
+metrics-server: https://github.com/kubernetes-incubator/metrics-server
+cluster-autoscaler: https://github.com/kubernetes/autoscaler/tree/master/cluster-autoscaler
